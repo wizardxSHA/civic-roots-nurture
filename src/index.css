@@ -8,60 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 29% 24%;
+    --background: 0 0% 99%;
+    --foreground: 213 45% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 29% 24%;
+    --card-foreground: 213 45% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 29% 24%;
+    --popover-foreground: 213 45% 18%;
 
-    /* Primary - Dark Blue from logo */
-    --primary: 210 29% 24%;
+    /* Primary - Navy from logo */
+    --primary: 213 45% 18%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Light Blue from logo */
-    --secondary: 204 70% 53%;
+    /* Secondary - Blue from logo */
+    --secondary: 203 82% 49%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Accent colors from logo */
-    --accent: 204 70% 53%;
+    /* Accent - vibrant from logo */
+    --accent: 203 82% 49%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 210 29% 24%;
+    --ring: 203 82% 49%;
 
     --radius: 0.75rem;
 
-    /* Brand colors from logo */
-    --civic-red: 6 78% 57%;
-    --civic-orange: 28 80% 52%;
-    --civic-yellow: 38 90% 51%;
-    --civic-green: 145 63% 42%;
-    --civic-blue: 204 70% 53%;
-    --civic-navy: 210 29% 24%;
+    /* Exact brand colors from logo */
+    --civic-red: 4 89% 58%;
+    --civic-orange: 18 95% 55%;
+    --civic-yellow: 45 98% 51%;
+    --civic-green: 150 51% 48%;
+    --civic-blue: 203 82% 49%;
+    --civic-navy: 213 45% 18%;
 
-    /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(var(--civic-orange)), hsl(var(--civic-red)));
-    --gradient-cool: linear-gradient(135deg, hsl(var(--civic-blue)), hsl(var(--civic-green)));
-    --gradient-rainbow: linear-gradient(90deg, 
-      hsl(var(--civic-red)), 
-      hsl(var(--civic-orange)), 
-      hsl(var(--civic-yellow)), 
-      hsl(var(--civic-green)), 
-      hsl(var(--civic-blue))
-    );
+    /* Beautiful gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(213 45% 18% / 0.95), hsl(203 82% 49% / 0.9));
+    --gradient-warm: linear-gradient(120deg, hsl(18 95% 55%), hsl(4 89% 58%));
+    --gradient-cool: linear-gradient(120deg, hsl(203 82% 49%), hsl(150 51% 48%));
+    --gradient-vibrant: linear-gradient(135deg, hsl(4 89% 58%), hsl(18 95% 55%), hsl(45 98% 51%), hsl(150 51% 48%), hsl(203 82% 49%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 99%), hsl(210 40% 98%));
 
-    /* Transitions */
+    /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -81,33 +78,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 210 29% 24%;
+    --background: 213 45% 12%;
     --foreground: 0 0% 98%;
 
-    --card: 217 33% 17%;
+    --card: 213 40% 16%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 217 33% 17%;
+    --popover: 213 40% 16%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 210 29% 24%;
+    --primary: 203 82% 49%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 204 70% 53%;
+    --secondary: 213 45% 18%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 17%;
+    --muted: 213 40% 16%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 204 70% 53%;
+    --accent: 203 82% 49%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 4 89% 58%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 212 27% 84%;
+    --border: 213 40% 22%;
+    --input: 213 40% 22%;
+    --ring: 203 82% 49%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -126,5 +123,40 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
   }
 }
