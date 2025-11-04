@@ -1,73 +1,121 @@
-# Welcome to your Lovable project
+# Civic Roots Foundation Website
 
-## Project info
+A modern, responsive website for Civic Roots Foundation - a BIPOC-led, youth-centered organization empowering underrepresented youth through civic engagement and leadership.
 
-**URL**: https://lovable.dev/projects/d92ca4f3-e6c2-4570-b6a6-ad52cff82982
+## 🌟 About
 
-## How can I edit this code?
+Civic Roots Foundation is committed to empowering BIPOC and underrepresented youth to shape the civic and diplomatic future of Canada. Rooted in Atlantic Canada, we build pathways for young people to engage in leadership, policy, and cultural exchange.
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop devices
+- **Modern UI**: Beautiful animations, gradients, and hover effects matching brand colors
+- **SEO Optimized**: Semantic HTML, meta tags, and accessibility best practices
+- **Multi-Page Structure**: 
+  - Homepage with hero section and key highlights
+  - About page with mission, vision, and values
+  - Programs showcase (4 flagship initiatives)
+  - News & Impact section
+  - Get Involved page with volunteer opportunities
+  - Contact page with social media links
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d92ca4f3-e6c2-4570-b6a6-ad52cff82982) and start prompting.
+## 🎨 Design
 
-Changes made via Lovable will be committed automatically to this repo.
+The website follows a vibrant color scheme inspired by the Civic Roots Foundation logo:
+- **Civic Red**: `hsl(4, 89%, 58%)`
+- **Civic Orange**: `hsl(18, 95%, 55%)`
+- **Civic Yellow**: `hsl(40, 100%, 50%)`
+- **Civic Green**: `hsl(150, 51%, 48%)`
+- **Civic Blue**: `hsl(203, 82%, 49%)`
+- **Civic Light Blue**: `hsl(184, 65%, 74%)`
 
-**Use your preferred IDE**
+## 🚀 Technologies
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first styling
+- **shadcn/ui** - Component library
+- **React Router** - Client-side routing
+- **Lucide React** - Icon library
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Installation
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd civic-roots-foundation
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🛠️ Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Run development server
+npm run dev
 
-**Use GitHub Codespaces**
+# Build for production
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## 📁 Project Structure
 
-This project is built with:
+```
+src/
+├── components/
+│   ├── ui/              # shadcn/ui components
+│   ├── Navigation.tsx   # Main navigation bar
+│   └── Footer.tsx       # Site footer
+├── pages/
+│   ├── Index.tsx        # Homepage
+│   ├── About.tsx        # About page
+│   ├── Programs.tsx     # Programs showcase
+│   ├── News.tsx         # News & Impact
+│   ├── GetInvolved.tsx  # Get Involved page
+│   ├── Contact.tsx      # Contact page
+│   └── NotFound.tsx     # 404 page
+├── assets/
+│   └── logo.png         # Foundation logo
+├── index.css            # Global styles & design tokens
+└── App.tsx              # Root component with routing
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🌐 Deployment
 
-## How can I deploy this project?
+This project is built with Lovable and can be deployed with one click:
 
-Simply open [Lovable](https://lovable.dev/projects/d92ca4f3-e6c2-4570-b6a6-ad52cff82982) and click on Share -> Publish.
+1. Open your [Lovable project](https://lovable.dev/projects/d92ca4f3-e6c2-4570-b6a6-ad52cff82982)
+2. Click **Publish** in the top right
+3. Your site will be live at `yoursite.lovable.app`
 
-## Can I connect a custom domain to my Lovable project?
+### Custom Domain
 
-Yes, you can!
+To connect a custom domain, navigate to **Project > Settings > Domains** in Lovable.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📧 Contact
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **General Inquiries**: info@civicrootsfoundation.ca
+- **Partnerships**: partnerships@civicrootsfoundation.ca
+- **Location**: St. John's, Newfoundland & Labrador, Canada
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Please reach out to discuss how you can help improve this website.
+
+## 📄 License
+
+Copyright © Civic Roots Foundation. All rights reserved.
+
+---
+
+Built with ❤️ by Civic Roots Foundation
